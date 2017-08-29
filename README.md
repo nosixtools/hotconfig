@@ -10,7 +10,7 @@ Example
 <dependency>
 	<groupId>com.nosixtools</groupId>
 	<artifactId>hotconfig</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 </dependency>
 ````
 需引入其它依赖支持
