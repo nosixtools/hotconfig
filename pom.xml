@@ -94,9 +94,9 @@
     </developers>
 
     <scm>
-        <connection>scm:git:https://github.com/nosix-me/hotconfig.git</connection>
-        <developerConnection>scm:git:https://github.com/nosix-me/hotconfig.git</developerConnection>
-        <url>https://github.com/nosix-me/hotconfig</url>
+        <connection>scm:git:https://github.com/nosixtools/hotconfig.git</connection>
+        <developerConnection>scm:git:https://github.com/nosixtools/hotconfig.git</developerConnection>
+        <url>https://github.com/nosixtools/hotconfig</url>
     </scm>
 
     <profiles>
