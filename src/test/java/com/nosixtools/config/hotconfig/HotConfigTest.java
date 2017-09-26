@@ -52,9 +52,12 @@ public class HotConfigTest {
 		String[] locations = new String[]{"classpath:application_ac.xml"};
 		new ClassPathXmlApplicationContext(locations);
 		HotConfig.init("com.nosixtools.config");
-		while(true) {
+		int i = 0;
+		while(i < 10) {
 			TimeUnit.SECONDS.sleep(3);
 			HotConfigTest.print();
+			i++;
 		}
+		HotConfig.stop();
 	}
 }

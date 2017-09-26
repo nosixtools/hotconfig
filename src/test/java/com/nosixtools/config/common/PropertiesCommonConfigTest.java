@@ -18,9 +18,10 @@ public class PropertiesCommonConfigTest {
 		
 		File file = new File(filePath);
 		DefaultPropertiesHandler config = new DefaultPropertiesHandler(file);
-		
 		Map<String,String> settings = config.getPropertiesMap();
-		while(true) {
+		
+		int i = 0;
+		while(i < 3) {
 			Iterator<Entry<String, String>> it = settings.entrySet().iterator();
 			while(it.hasNext()) {
 				Entry<String, String> temp = it.next();
@@ -28,6 +29,8 @@ public class PropertiesCommonConfigTest {
 			}
 			System.out.println("-----------------------------");
 			TimeUnit.SECONDS.sleep(1);
+			i++;
 		}
+		config.close();
 	}
 }

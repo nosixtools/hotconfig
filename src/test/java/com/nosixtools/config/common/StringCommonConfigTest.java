@@ -14,11 +14,13 @@ public class StringCommonConfigTest {
 		
 		File file = new File(filePath);
 		DefaultStringHandler config = new DefaultStringHandler(file);
-		
-		while(true) {
+		int i = 0;
+		while(i < 3) {
 			System.out.println(config.getContent());
 			System.out.println("-----------------------------");
 			TimeUnit.SECONDS.sleep(1);
+			i++;
 		}
+		config.close();
 	}
 }

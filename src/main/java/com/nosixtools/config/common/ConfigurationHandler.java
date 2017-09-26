@@ -25,6 +25,10 @@ public class ConfigurationHandler {
 		return new ConfigurationHandler(configuration);
 	}
 	
+	public void stop() {
+		executorService.shutdown();
+	}
+	
 	private void init() {
 		EventBus eventBus = new EventBus();
 		eventBus.register(configuration);
@@ -37,6 +41,8 @@ public class ConfigurationHandler {
  			TimeUnit.SECONDS.sleep(1);
  		} catch (InterruptedException e) {}
 	}
+	
+	
 }
 
 	

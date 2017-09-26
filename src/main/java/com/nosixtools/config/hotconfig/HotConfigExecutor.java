@@ -48,6 +48,10 @@ public class HotConfigExecutor {
 		}, 1000l, 3000l, TimeUnit.MICROSECONDS);
 	}
 	
+	public void stop() {
+		ses.shutdown();
+	}
+	
 	public void loadConfigFile(String configFileName) throws Throwable {
 		if(configFileName.startsWith("classpath:")) {
 			setValueFromClassPath(configFileName);

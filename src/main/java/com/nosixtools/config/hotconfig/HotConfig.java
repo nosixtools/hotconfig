@@ -24,6 +24,14 @@ public class HotConfig {
 		findAnnotation(startPackage);
 		executorTask();
 	}
+	
+	public static void stop() {
+		Iterator<Entry<String,HotConfigExecutor>> it = map.entrySet().iterator();
+        while(it.hasNext()){
+            Entry<String,HotConfigExecutor> entry =it.next();
+            entry.getValue().stop();
+        }
+	}
 
 	private static void executorTask() throws Throwable {
         Iterator<Entry<String,HotConfigExecutor>> it = map.entrySet().iterator();
